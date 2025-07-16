@@ -1,0 +1,103 @@
+.styled-table {
+    width: 100%;
+   
+
+    border-collapse: separate;
+    border-spacing: 0.2px; /* Adds space between cells */
+  }
+  
+  .styled-table th, .styled-table td {
+    border: 2px solid #333; /* Adds edges to cells */
+    
+    padding: 10px; /* Adds spacing inside cells */
+  }
+  
+
+  .table {
+    width: 100%; /* Make the table span the full width of its container */
+    border-collapse: collapse; /* Remove space between table cells */
+    border: 1px solid #ddd; /* Add a border around the table */
+    margin: 20px 0; /* Add spacing above and below the table */
+    font-size: 16px; /* Set font size */
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px; /* Add padding inside cells for better readability */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .table th {
+    background-color: #f4f4f4; /* Light gray background for headers */
+    color: #333; /* Darker text for headers */
+    border-bottom: 2px solid #ddd; /* Add a bottom border to headers */
+  }
+  
+  .table td {
+    background-color: #fff; /* White background for cells */
+  }
+  
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light gray background for odd rows */
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #eaeaea; /* Highlight rows on hover */
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: flex-end; /* Align pagination to the right */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 5px; /* Add spacing between pagination items */
+  }
+  
+  .pagination li a {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #007bff; /* Blue text for links */
+    text-decoration: none;
+    border-radius: 4px; /* Rounded corners for links */
+  }
+  
+  .pagination li a:hover {
+    background-color: #007bff;
+    color: #f1f1f1c5; /* White text on hover */
+  }
+  
+  .pagination li.active a {
+    background-color: #007bff;
+    color: #f1f1f1c5;
+  }
+  
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+  }
+  
+  .add-article-button {
+    background-color: #111314; /* Button background color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
+  }
+  
+  .add-article-button i {
+    margin-left: 10px; /* Add space between text and icon */
+  }
+  
+  .add-article-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

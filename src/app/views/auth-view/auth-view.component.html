@@ -1,0 +1,140 @@
+<!-- <div class="container text-center" style="margin-top: 50px;">
+
+
+
+  <div class="row">
+    <div class="col sm-9 co-md-7 col lg-5 mx-auto ">
+      <div class="card-body">
+
+
+        <form [formGroup]="newAuth" (ngSubmit)="onSubmitNewAuth()">
+
+
+          <label class="form-label" for="email">Email address</label>
+          <input id="email" type="email" class="form-control" placeholder="email@example.com" formControlName="email"
+            required>
+          <div *ngIf="newAuth.controls['email'].errors?.['required'] && newAuth.controls['email'].touched"
+            class="alert alert-danger">
+            email is required.
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Password" formControlName="password"
+              required>
+            <div *ngIf="newAuth.controls['password'].errors?.['required'] && newAuth.controls['password'].touched"
+              class="alert alert-danger">
+              password is required.
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit" (click)="onSignIn()" [disabled]="newAuth.invalid">Sign
+            in</button>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="col">
+
+      <h1> content </h1>
+    </div>
+  </div>
+
+
+</div> -->
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+<body >
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form"   [formGroup]="newAuth" (ngSubmit)="onSubmitNewAuth()">
+					<span class="login100-form-title p-b-43">
+						Login to continue
+					</span>
+					
+					
+					<div style=" margin-bottom: 60px; " class="wrap-input100 validate-input"  data-validate = "Valid email is required: ex@abc.xyz" >
+						<input  id="email"  class="input100" [ngClass]="{'has-val': newAuth.controls['email'].value}"type="email" name="email"  formControlName="email" required>
+						<span class="focus-input100"></span>
+						<span class="label-input100">Email</span>
+						<div  *ngIf="newAuth.controls['email'].errors?.['required'] && newAuth.controls['email'].touched"
+						class="alert alert-danger">
+						Email is required.
+					  </div>
+			
+					</div>
+					
+					
+					<div style=" margin-bottom: 60px;" class="wrap-input100 validate-input" data-validate="Password is required">
+						<input  id="password" class="input100" [ngClass]="{'has-val': newAuth.controls['password'].value}" type="password" name="pass"  formControlName="password" required>
+						<span class="focus-input100"></span>
+						<span class="label-input100">Password</span>
+						<div *ngIf="newAuth.controls['password'].errors?.['required'] && newAuth.controls['password'].touched"
+						class="alert alert-danger">
+						Password is required.
+					  </div>
+					</div>
+
+					<div class="flex-sb-m w-full p-t-3 p-b-32" style="margin-top: 10px; margin-bottom: 10px;" >
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" style="padding-top: 2px;" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+						
+					</div>
+			
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" (click)="onSignIn()"
+            [disabled]="newAuth.invalid">
+							Login
+						</button>
+					</div>
+					
+					
+					
+
+
+					
+				</form>
+				<div class="login100-more" style="background-image: url('../../../assets/images/garage.jpg');">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>

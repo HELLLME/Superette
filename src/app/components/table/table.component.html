@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-table styled-table">
+  
+      <!-- Ref Column -->
+      <ng-container matColumnDef="ref">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ref </th>
+        <td mat-cell *matCellDef="let element"> {{element.ref}} </td>
+      </ng-container>
+  
+      <!-- Product Column -->
+      <ng-container matColumnDef="produitName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
+        <td mat-cell *matCellDef="let element"> {{element.produitName}} </td>
+      </ng-container>
+  
+      <!-- Categorie Column -->
+      <ng-container matColumnDef="categorie">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Categorie </th>
+        <td mat-cell *matCellDef="let element"> {{element.categorie}} </td>
+      </ng-container>
+  
+      <!-- Price Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+      </ng-container>
+  
+      <!-- Details Column -->
+      <ng-container matColumnDef="details">
+        <th mat-header-cell *matHeaderCellDef> Details </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button color="primary" (click)="viewDetails(element)">View</button>
+        </td>
+      </ng-container>
+  
+      <!-- Header Row -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" class="thead-dark"></tr>
+  
+      <!-- Data Rows -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+
+   
+    
+   
+     <div class="button-container">
+    <button class="add-article-button" (click)="onClickNewProduct()">
+      Ajouter un article <i class="fa fa-plus"></i></button>
+     </div>
+  </div>
+  
+<!--   
+  //////////////////////////////////////////////////////////////////////////////////////
+  <table class="styled-table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Ref</th>
+        <th scope="col">Product</th>
+        <th scope="col">Categorie</th>
+        <th scope="col">Price</th>
+        <th scope="col">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr app-table-line *ngFor="let sup of sups"
+     
+      [ref]="sup.ref"
+      [produitName]="sup.produitName"
+      [categorie]="sup.categorie"
+      [price]="sup.price"> -->
+      <!-- [details]="sup.details" -->
+      <!-- </tr >
+      
+    </tbody>
+  </table>
+
+
+  //////////////////////////////////////////////////////// -->
+
+  <!-- <table class="table table-striped table-condensed table-hover">
+    <thead>
+        <tr>
+            <th class="id">Id&nbsp;<a ng-click="sort_by('id')"><i class="icon-sort"></i></a></th>
+            <th class="name">Name&nbsp;<a ng-click="sort_by('name')"><i class="icon-sort"></i></a></th>
+            <th class="description">Description&nbsp;<a ng-click="sort_by('description')"><i class="icon-sort"></i></a></th>
+            <th class="field3">Field 3&nbsp;<a ng-click="sort_by('field3')"><i class="icon-sort"></i></a></th>
+            <th class="field4">Field 4&nbsp;<a ng-click="sort_by('field4')"><i class="icon-sort"></i></a></th>
+           
+        </tr>
+    </thead>
+    <tfoot>
+        <td colspan="6">
+            <div class="pagination pull-right">
+                <ul>
+                    <li ng-class="{disabled: currentPage == 0}">
+                        <a href ng-click="prevPage()">« Prev</a>
+                    </li>
+                    <li ng-repeat="n in range(pagedItems.length)"
+                        ng-class="{active: n == currentPage}"
+                    ng-click="setPage()">
+                        <a href ng-bind="n + 1">1</a>
+                    </li>
+                    <li >
+                        <a href ng-click="nextPage()">Next »</a>
+                    </li>
+                </ul>
+            </div>
+        </td>
+    </tfoot>
+    <tbody>
+        <tr app-table-line *ngFor="let sup of sups"
+     
+        [ref]="sup.ref"
+        [produitName]="sup.produitName"
+        [categorie]="sup.categorie"
+        [price]="sup.price">
+        </tr>
+    </tbody>
+</table>  -->

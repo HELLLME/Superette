@@ -1,0 +1,49 @@
+.image-slider-container {
+    border-radius: 10px; /* Rounds the edges */
+     width: 100%;
+    overflow: hidden;
+    position: relative; 
+    margin: 20px auto; /* Centers the slider and adds spacing */
+
+    margin-top: 60px;
+  }
+
+
+
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0; /* Prevent images from shrinking */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    height: 100px; /* Adjust height as needed */
+  }
+  
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+  }
+  
+  .slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .slider-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  

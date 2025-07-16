@@ -1,0 +1,36 @@
+body {
+    padding-top: 50px; /* Adjust based on header height */
+}
+.main-content {
+     /* Adjust according to your header height */
+
+    
+}
+
+
+  .background
+  {
+
+    padding: 0;
+    background-image: url('src\assets\images\background.jpg'); /* Replace with your image path */
+
+    
+    background-size: cover; /* Cover the entire viewport */
+ 
+
+    
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the background behind all other content */
+   
+  }
+  :host {
+    display: block;
+    min-height: 100vh; /* Ensure content takes up at least the full viewport height */
+    position: relative; /* Needed for proper z-index layering */
+  }
+  .content {
+    position: relative; /* Needed for z-index to work */
+    z-index: 1; /* Ensure content is above the background */
+  }
+

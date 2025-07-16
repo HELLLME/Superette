@@ -1,0 +1,51 @@
+<div  class="container text-center" style="margin-top: 50px;">
+
+
+  
+	<div class="row">
+	<div class="col sm-9 co-md-7 col lg-5 mx-auto ">
+	<div class="card-body">
+  
+  
+	<form [formGroup]="newAuth" (ngSubmit)="onSubmitNewAuth()">
+	  
+		
+		<label  class="form-label"
+		for="email">Email address</label>
+		<input id="email" 
+		type="email" class="form-control"  placeholder="email@example.com"
+		formControlName="email"
+		required>
+		<div *ngIf="newAuth.controls['email'].errors?.['required'] && newAuth.controls['email'].touched"
+		class="alert alert-danger">
+		  email is required.
+		</div>
+	  
+	  <div class="mb-3">
+		<label  class="form-label" for="password">Password</label>
+		<input id="password"
+		 type="password" class="form-control"  placeholder="Password"
+		 formControlName="password"
+		required>
+		<div *ngIf="newAuth.controls['password'].errors?.['required'] && newAuth.controls['password'].touched"
+		class="alert alert-danger">
+		 password is required.
+		</div>
+	  </div>
+	  
+	  <button class="btn btn-primary" type="submit" (click)="onSignIn()"
+	  [disabled]="newAuth.invalid" >Sign in</button>
+   
+	</form>
+   </div>
+  </div>
+  
+  <div class="col">
+  
+	<h1> content </h1>
+   </div>
+  </div>
+  
+  
+  </div>
+  
