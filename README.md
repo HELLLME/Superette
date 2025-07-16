@@ -28,11 +28,6 @@ Superette is a web-based showcase platform designed for supermarkets looking to 
 ## 📸 Screenshots
 <img width="1349" height="778" alt="image" src="https://github.com/user-attachments/assets/10bb705a-35cf-43bf-8575-d02f5b0cac63" />
 
-
-## 📂 Installation & Usage
-To run the project locally:
-To make your README installation instructions appropriate for an **Angular** project, structure them around the tools commonly used with Angular—especially the Angular CLI. Here’s how you can update the relevant section of your README:
-
 ## 📂 Installation & Setup
 
 **Prerequisites:**
