@@ -23,6 +23,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { TestGithubViewComponent } from './views/test-github-view/test-github-view.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatSortModule } from '@angular/material/sort';
     AuthViewComponent,
     FooterComponent,
     LandingPageComponent,  
-    AdsSliderComponent
+    AdsSliderComponent,
+    TestGithubViewComponent
   ],
   imports: [
     BrowserModule,

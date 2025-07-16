@@ -8,6 +8,7 @@ import { ProduitsComponent } from './components/produits/produits.component';
 import { SingleProduitComponent } from './components/single-produit/single-produit.component';
 import { AddNewProduitComponent } from './components/add-new-produit/add-new-produit.component';
 import { LandingPageComponent } from './views/landing-page/landing-page.component';
+import { TestGithubViewComponent } from './views/test-github-view/test-github-view.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'produits' , component: ProduitsComponent},
   {path: 'produits/:ref' ,component: SingleProduitComponent},
   {path: 'new-produit' ,component: AddNewProduitComponent},
+  { path: 'test-github', component: TestGithubViewComponent },
    {path: '' ,component: AuthViewComponent},
   {path: 'not-found' , component: ErrorViewComponent},
   {path: '**' , redirectTo: 'not-found'}
