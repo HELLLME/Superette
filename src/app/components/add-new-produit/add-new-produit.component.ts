@@ -1,6 +1,6 @@
 import { Component ,OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
-import { productName } from 'src/app/models/productName.model';
+import { Product } from 'src/app/models/product.model';
 import { SupService } from 'src/app/services/sup service/sup.service';
 import { Router } from '@angular/router';
 import { MatSort } from '@angular/material/sort';
@@ -15,7 +15,7 @@ export class AddNewProduitComponent implements OnInit {
 
 
   newProduit: FormGroup;
-  product : productName;
+  product : Product;
 
   categories: string[] = [
     'Fruits',
@@ -49,7 +49,7 @@ constructor( private fb : FormBuilder,private supService:SupService , private ro
 }
   ngOnInit() : void  {
 
-    this.product= new productName('','',1200);
+    this.product= new Product('','',1200);
 
     
   }
@@ -58,7 +58,7 @@ constructor( private fb : FormBuilder,private supService:SupService , private ro
 
     console.log(this.newProduit);
 
-const product = new productName(
+const product = new Product(
   form.value.produitName,
   form.value.categorie,
   form.value.price

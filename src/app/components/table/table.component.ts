@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { SupService } from 'src/app/services/sup service/sup.service';
-import { productName } from 'src/app/models/productName.model';
+import { Product } from 'src/app/models/product.model';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';

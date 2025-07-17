@@ -24,6 +24,9 @@ constructor(private router : Router ,private authService : AuthService, private 
 
 
 }
+ngOnInit(): void {
+  this.products = this.supService.getSups(); // For now, use the static service. Replace with API call later.
+}
   OnDetails(){
 
     this.router.navigate(['produits/id'])
