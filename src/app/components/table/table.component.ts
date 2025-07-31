@@ -47,9 +47,6 @@ export class TableComponent implements OnInit, OnChanges {
   viewDetails(element: any): void {
     console.log('Details:', element);
   }
-  onClickNewProduct() {
-    this.router.navigate(['/new-produit'])
-  }
 
 
 }
