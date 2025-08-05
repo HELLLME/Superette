@@ -25,6 +25,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { TestGithubViewComponent } from './views/test-github-view/test-github-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthViewCustomerComponent } from './views/auth-view-customer/auth-view-customer.component';
+import { AvailableProductsComponent } from './views/available-products/available-products.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     LandingPageComponent,  
     AdsSliderComponent,
-    TestGithubViewComponent
+    TestGithubViewComponent,
+    AuthViewCustomerComponent,
+    AvailableProductsComponent
   ],
   imports: [
     BrowserModule,

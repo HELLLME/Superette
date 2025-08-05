@@ -85,6 +85,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
+
+          <!-- Login button - shown only on available-products view -->
+          <li class="nav-item" *ngIf="showLoginButton">
+            <a class="nav-link" routerLink="/auth-view-customer">Login</a>
+          </li>
         </ul>
       </div>
     </div>
