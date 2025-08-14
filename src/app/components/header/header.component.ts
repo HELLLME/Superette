@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.checkCurrentRoute();
 
-     // Check every time navigation finishes
+     // Check every time navigation finishes.
      this.router.events
      .pipe(filter(event => event instanceof NavigationEnd))
      .subscribe(() => {
