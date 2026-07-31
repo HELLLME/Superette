@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 @Injectable({ providedIn: 'root' })
 export class SupService {
   private sups: Product[] = [];
-  
+
   constructor(private http: HttpClient) {
     // Only initialize demo products ONCE
     if (this.sups.length === 0) {
@@ -21,27 +21,29 @@ export class SupService {
     }
   }
 
+  //to do 
+
   getSups(): Observable<any> {
     const headers = {
       'X-RapidAPI-Key': '3592821a44msh1f37b1fecda871ap1fe6fejsn04f88bf856fa',
       'X-RapidAPI-Host': 'grocery-api2.p.rapidapi.com'
     };
-    
+
     // Add query parameters
     const params = {
       query: 'vegetable',
       country: 'us',
       page: '1'
     };
-    
-    return this.http.get('https://grocery-api2.p.rapidapi.com/amazon', { 
+
+    return this.http.get('https://grocery-api2.p.rapidapi.com/amazon', {
       headers,
-      params 
+      params
     });
   }
 
-  getElementByRef(ref: number) {
-    return this.sups.find(s => s.ref === ref);
+  getElementByRId(id: number) {
+    return this.sups.find(s => s.id === id);
   }
 
   addProduit(newProduit: Product) {

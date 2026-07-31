@@ -10,27 +10,26 @@ import { Router } from '@angular/router';
 export class TableLineComponent {
 
 
-  @Input() ref : string ;
-  @Input() produitName : string ;
-  @Input() categorie : string ;
-  @Input() price : string ;
+  @Input() id: string;
+  @Input() produitName: string;
+  @Input() categorie: string;
+  @Input() price: string;
 
 
 
   // @Input() details : string ;
-  constructor(private produits :SupService , private router : Router )
-  {
+  constructor(private produits: SupService, private router: Router) {
 
 
   }
 
   ngOnInit(): void {
   }
-  
 
-  OnDetails(){
 
-this.router.navigate(['produits/ref'])
+  OnDetails() {
+
+    this.router.navigate(['produits/id'])
 
   }
 
